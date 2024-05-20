@@ -13,6 +13,7 @@ var sessionRouter = require('./routes/session')
 // lokasi untuk auth
 const loginRoutes = require('./routes/login')
 const registerRoutes = require('./routes/register')
+const productsRoutes = require("./routes/products");
 
 //panggil routes kelas
 var kelasRouter = require('./routes/kelas')
@@ -52,5 +53,6 @@ app.use('/session', sessionRouter)
 
 app.use("/login", loginRoutes);
 app.use("/register", registerRoutes);
+app.use("/products", productsRoutes);
 
 module.exports = app;
